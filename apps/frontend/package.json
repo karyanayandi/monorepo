@@ -1,0 +1,39 @@
+{
+  "name": "frontend-repo",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "npm run with-env next dev --turbopack",
+    "build": "npm run with-env next build",
+    "start": "npm run with-env next start",
+    "lint": "next lint",
+    "with-env": "dotenv -e ../../.env --"
+  },
+  "dependencies": {
+    "@emotion/cache": "^11.13.5",
+    "@emotion/react": "^11.13.5",
+    "@emotion/styled": "^11.13.5",
+    "@mui/material": "^6.1.8",
+    "@mui/material-nextjs": "^6.1.8",
+    "@reduxjs/toolkit": "^2.3.0",
+    "@repo/firebase-config": "*",
+    "axios": "^1.7.7",
+    "dotenv-cli": "^7.4.4",
+    "firebase": "^11.0.2",
+    "next": "15.0.3",
+    "react": "19.0.0-rc-66855b96-20241106",
+    "react-dom": "19.0.0-rc-66855b96-20241106",
+    "react-redux": "^9.1.2"
+  },
+  "devDependencies": {
+    "@next/eslint-plugin-next": "^15.0.3",
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^9.15.0",
+    "typescript": "^5"
+  },
+  "packageManager": "npm@10.9.0"
+}

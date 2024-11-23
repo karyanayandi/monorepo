@@ -1,0 +1,31 @@
+{
+  "name": "backend-repo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "core/app.ts",
+  "scripts": {
+    "dev": "dotenv -e ../../.env -- nodemon --exec ts-node ./core/app.ts",
+    "start": "npm run with-env node ./functions/dist/core/app.js",
+    "prebuild": "cp -r common config controller core entities middleware repository routes functions/src",
+    "build": "tsc -p functions/tsconfig.json",
+    "deploy": "npm run with-env npm run build && firebase emulators:start --only functions",
+    "with-env": "dotenv -e ../../.env --"
+  },
+  "dependencies": {
+    "@repo/firebase-config": "*",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "dotenv-cli": "^7.4.4",
+    "express": "^5.0.1",
+    "firebase-admin": "^13.0.1",
+    "firebase-functions": "^6.1.1",
+    "uuid": "^11.0.3"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "*",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "nodemon": "^3.1.7"
+  },
+  "packageManager": "npm@10.9.0"
+}
