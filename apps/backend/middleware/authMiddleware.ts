@@ -10,8 +10,6 @@ const authMiddleware = async (
 ) => {
   const authToken = req.headers.authorization?.split("Bearer ")[1];
 
-  console.log("authToken", authToken);
-
   try {
     if (!authToken) {
       throw new ApiError(401, "Authorization token not found");
