@@ -17,6 +17,7 @@ export const makeStore = () => {
 };
 
 export type AppStore = ReturnType<typeof makeStore>;
+
 export type RootState = {
   auth: AuthState;
   user: UserState;

@@ -20,7 +20,7 @@ const putUserData = async (req: Request, res: Response, next: NextFunction) => {
   try {
     const userData = await updateUser(userId, req.body);
 
-    handleResponse(res, "User successfully updted!", userData);
+    handleResponse(res, "User successfully updated!", userData);
   } catch (error) {
     next(error);
   }

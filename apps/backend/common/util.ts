@@ -1,6 +1,5 @@
 import { Response } from "express";
-
-import { HTTP_CODE } from "./constant";
+import { HTTP_CODE } from "@repo/shared";
 
 export const handleResponse = (res: Response, message: string, data?: any) => {
   res.status(HTTP_CODE.OK).json({

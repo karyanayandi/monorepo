@@ -1,10 +1,10 @@
 import cors from "cors";
 import dotenv from "dotenv";
 import express, { Application, Request, Response, NextFunction } from "express";
+import { HTTP_CODE } from "@repo/shared";
 
 import ApiError from "../entities/ApiError";
 import userRoutes from "../routes/userRoutes";
-import { HTTP_CODE } from "../common/constant";
 
 dotenv.config();
 

@@ -1,6 +1,7 @@
+import { HTTP_CODE } from "@repo/shared";
+
 import ApiError from "../entities/ApiError";
 import FireAdmin from "../config/firebaseConfig";
-import { HTTP_CODE } from "../common/constant";
 
 const db = FireAdmin.firestore();
 

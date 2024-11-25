@@ -1,3 +1,5 @@
+import { User } from "@repo/shared";
+
 const API_BASE_URL =
   process.env.NEXT_PUBLIC_API_URL ||
   "http://127.0.0.1:5001/ebuddy-interview/us-central1/api";
@@ -39,10 +41,7 @@ const apiCall = async (
   return response.json();
 };
 
-export const updateUserData = async (
-  userId: string,
-  data: { name: string },
-) => {
+export const updateUserData = async (userId: string, data: User) => {
   try {
     return await apiCall("PUT", `users/update-user-data/${userId}`, data);
   } catch (error) {
